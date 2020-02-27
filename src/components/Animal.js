@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Cat({breed, id, selected, onClickCat, index}) {
+export default function Animal({breed, id, selected, onClickAnimal, index}) {
     const css = {
         backgroundColor: selected ? "lightblue" : ""
     }
     return (
-        <div style={css} onClick={() => {onClickCat(id)}}>
+        <div style={css} onClick={() => {onClickAnimal(id)}}>
             {breed}           
         </div>
     )

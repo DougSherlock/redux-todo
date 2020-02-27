@@ -37,3 +37,19 @@ export const toggleCat = id => ({
   }
 })
 
+let nextDogId = 0
+export const addDog = breed => ({
+  type: 'ADD_DOG',
+  payload : {
+    breed: breed,
+    id: nextDogId++
+  }
+})
+
+export const toggleDog = id => ({
+  type: 'TOGGLE_DOG',
+  payload: {
+    id : id
+  }
+})
+

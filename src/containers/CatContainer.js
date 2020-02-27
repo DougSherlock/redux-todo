@@ -1,13 +1,11 @@
 import { connect } from 'react-redux'
-//import { addCat } from '../actions/index.js'
-import CatList from '../components/CatList'
+import AnimalList from '../components/AnimalList'
 import { toggleCat } from '../actions'
 
 const mapStateToProps = (state, ownProps) => {
     console.log('CatContainer.mapStateToProps')
     return {
-        // active: ownProps.filter === state.visibilityFilter
-        cats: state.catReducer //state.cats
+        animals: state.catReducer //state.cats
     }
 }
 
@@ -15,8 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => {
     console.log('CatContainer.mapDispatchToProps')
     return {
-        onClickCat: index => {
-            console.log('CatContainer.mapDispatchToProps.onClickCat - index:' + index)
+        onClickAnimal: index => {
+            console.log('CatContainer.mapDispatchToProps.onClickAnimal - index:' + index)
             dispatch(toggleCat(index))
         }
     }
@@ -26,6 +24,6 @@ const mapDispatchToProps = dispatch => {
 const CatContainer = connect(
     mapStateToProps
     , mapDispatchToProps
-)(CatList)
+)(AnimalList)
 
 export default CatContainer
